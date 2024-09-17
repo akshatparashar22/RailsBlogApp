@@ -30,6 +30,9 @@ gem 'htmlbeautifier'
 # For code completion, intellisense, and inline documentatio
 gem 'solargraph'
 
+#For Authentication
+gem 'devise'
+
 gem "turbo-rails", "~> 1.0"
 
 # Reduces boot times through caching; required in config/boot.rb
