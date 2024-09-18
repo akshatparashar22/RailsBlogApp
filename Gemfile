@@ -33,6 +33,10 @@ gem 'solargraph'
 #For Authentication
 gem 'devise'
 
+# For API Authentication
+gem 'devise-jwt'
+
+
 gem "turbo-rails", "~> 1.0"
 
 # Reduces boot times through caching; required in config/boot.rb

@@ -64,6 +64,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     backport (1.2.0)
+    base64 (0.2.0)
     bcrypt (3.1.20)
     benchmark (0.3.0)
     bindex (0.8.1)
@@ -90,7 +91,20 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-jwt (0.12.1)
+      devise (~> 4.0)
+      warden-jwt_auth (~> 0.10)
     diff-lcs (1.5.1)
+    dry-auto_inject (0.8.0)
+      dry-container (>= 0.3.4)
+    dry-configurable (0.13.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.6)
+    dry-container (0.9.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.13, >= 0.13.0)
+    dry-core (0.7.1)
+      concurrent-ruby (~> 1.0)
     e2mmap (0.1.0)
     erubi (1.13.0)
     ffi (1.17.0)
@@ -104,6 +118,8 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.7.2)
+    jwt (2.9.0)
+      base64
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -262,6 +278,11 @@ GEM
     unicode-display_width (2.6.0)
     warden (1.2.9)
       rack (>= 2.0.9)
+    warden-jwt_auth (0.10.0)
+      dry-auto_inject (>= 0.8, < 2)
+      dry-configurable (>= 0.13, < 2)
+      jwt (~> 2.1)
+      warden (~> 1.2)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -288,6 +309,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  devise-jwt
   htmlbeautifier
   jbuilder (~> 2.7)
   listen (~> 3.3)
