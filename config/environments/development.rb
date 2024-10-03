@@ -40,6 +40,23 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',      # Gmail SMTP server
+    port:                 587,                   # TLS port
+    domain:               'gmail.com',           # Domain
+    user_name:            'akshatparashar2001@gmail.com',  # Your Gmail email address
+    password:             'ecevcdbemnagsuxi',     # App password created in Google Account
+    authentication:       'plain',
+    enable_starttls_auto: true,                    # Enable StartTLS (recommended)
+    openssl_verify_mode: 'none',  # Bypass SSL verification
+    ssl: true,
+    tls: true
+  }
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

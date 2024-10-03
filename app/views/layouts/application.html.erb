@@ -20,6 +20,10 @@
         turbo_method: :delete,
         turbo_confirm: 'Are you sure?'
         } %>
+      <%= link_to 'Delete Profile', delete_profile_path, data:{
+        turbo_method: :delete,
+        turbo_confirm: 'This will delete your profile and all associated data. Are you sure?'
+      }, class: 'delete-profile-btn' %>
     <% else %>
       <%= link_to 'Sign up', new_user_registration_path %> |
       <%= link_to 'Login', new_user_session_path %>

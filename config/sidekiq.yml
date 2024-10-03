@@ -1,0 +1,9 @@
+:concurrency: 5 #No of threads
+:queues: # Default queue for job processing
+ - default
+ - mailers
+:schedule:
+  send_follow_up_email:
+    cron: "*/1 * * * *"
+    class: SendFollowUpEmailJob
+    queue: default
